@@ -15,7 +15,6 @@ const CardForm = props => {
     e.preventDefault();
     dispatch(addCard({ columnId, title }));
     setTitle('');
-    console.log(title);
   };
 
   return (
