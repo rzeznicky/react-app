@@ -40,7 +40,7 @@ const reducer = (state, action) => {
     case 'UPDATE_SEARCHSTRING':
       return { ...state, searchString: action.payload };
     case 'ADD_LIST':
-      return { ...state, lists: [...state.lists, { ...action.payload }] };
+      return { ...state, lists: [...state.lists, { id: shortid(), ...action.payload }] };
     case 'TOGGLE_CARD_FAVORITE':
       return { ...state, cards: state.cards.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card) };
     default:
