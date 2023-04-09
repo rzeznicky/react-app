@@ -13,8 +13,7 @@ const Card = props => {
   }
 
   return (
-    <li className={styles.card}>
-      {props.title}
+    <li className={styles.card}>{props.title}
       <span onClick={handleFavorite} className={clsx(props.isFavorite ? "fa fa-star" : "fa fa-star-o", props.isFavorite && styles.isFavorite)} />
     </li>
   )
